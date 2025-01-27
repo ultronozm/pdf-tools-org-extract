@@ -1,0 +1,28 @@
+#+title: pdf-tools-org-extract.el: Extract PDF annotations to org-mode
+#+author: Paul Nelson
+
+* Overview
+
+=pdf-tools-org-extract= is an Emacs package that extracts text annotations from PDF files (viewed with =pdf-tools=) into org-mode buffers. The annotations are organized by page number and formatted by default as LaTeX source blocks, though the format is customizable.
+
+* Installation
+
+Install =pdf-tools-org-extract= by downloading the source and using =M-x package-install-file=.
+
+* Usage
+
+After installing the package:
+
+1. Open a PDF file in =pdf-tools=
+2. Add some text annotations to the PDF
+3. Press =C-c C-a e= to extract annotations to an org buffer
+   (or =M-x pdf-tools-org-extract-annotations=)
+
+The annotations will be extracted to a new org-mode buffer, organized by page number.
+
+* Customization
+
+You can customize the following variables:
+- =pdf-tools-org-extract-format=: Choose output format (default: LaTeX source blocks)
+- =pdf-tools-org-extract-buffer-name-template=: Template for buffer names
+- =pdf-tools-org-extract-header-template=: Template for org file headers
