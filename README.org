@@ -7,7 +7,18 @@
 
 * Installation
 
-Install =pdf-tools-org-extract= by downloading the source and using =M-x package-install-file=.
+Install =pdf-tools-org-extract= by downloading the source and using =M-x package-install-file= and adding something like =(define-key pdf-view-mode-map (kbd "C-c C-a e") #'pdf-tools-org-extract-annotations)= to your config.
+
+You can also install via a use-package declaration such as the following, which works with [[https://github.com/progfolio/elpaca][elpaca]]:
+
+#+begin_src elisp
+(use-package pdf-tools-org-extract
+  :after pdf-annot
+  :demand
+  :ensure (:host github :repo "ultronozm/pdf-tools-org-extract.el")
+  :bind (:map pdf-view-mode-map
+              ("C-c C-a e" . pdf-tools-org-extract-annotations)))
+#+end_src
 
 * Usage
 

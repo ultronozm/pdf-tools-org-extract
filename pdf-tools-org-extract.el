@@ -126,11 +126,5 @@ formatted string.")
       (pop-to-buffer (current-buffer))
       (message "Extracted %d annotations" (length annotations)))))
 
-;;;###autoload
-(defun pdf-tools-org-extract-enable ()
-  "Enable pdf-tools-org-extract by binding the default key."
-  (define-key pdf-view-mode-map (kbd "C-c C-a e")
-              #'pdf-tools-org-extract-annotations))
-
 (provide 'pdf-tools-org-extract)
 ;;; pdf-tools-org-extract.el ends here
